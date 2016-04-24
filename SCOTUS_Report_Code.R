@@ -250,6 +250,7 @@ id118365_neighborhood_subgraph <- connect.neighborhood(id118365_neighborhood_lis
 plot(id118365_neighborhood_subgraph)
 
 #Second, the neighborhood of order-1 cited by id118365, the vertex with highest betewenness centrality value
+igraph.options(edge.arrow.size=0.5)
 id118365_neighborhood_list <- graph.neighborhood(citation_net, 1, "id118365", mode=c("out"))
 id118365_neighborhood_subgraph <- connect.neighborhood(id118365_neighborhood_list[[1]], 1, mode=c("out")) 
 plot(id118365_neighborhood_subgraph)
@@ -268,6 +269,7 @@ id2959750_neighborhood_list <- graph.neighborhood(citation_net, 1, "id2959750", 
 id2959750_neighborhood_subgraph <- connect.neighborhood(id2959750_neighborhood_list[[1]], 1, mode=c("in")) 
 plot(id2959750_neighborhood_subgraph)
 
+igraph.options(vertex.size=3, vertex.label=NA, edge.arrow.size=0.3)
 #Second, the neighborhood of order-1 cited by id2959750, the vertex with highest closeness centrality value
 id2959750_neighborhood_list <- graph.neighborhood(citation_net, 1, "id2959750", mode=c("out"))
 id2959750_neighborhood_subgraph <- connect.neighborhood(id2959750_neighborhood_list[[1]], 1, mode=c("out")) 
